@@ -7,7 +7,7 @@
 ### GET /person/ID
   To retrieve info about person with ID.
 
-### GET /person/ID/cars
+### GET /person/ID/car
   To retrieve all cars owned by person.
 
 ### POST /person
@@ -16,7 +16,7 @@
   }
   To add a person.
 
-### POST /person/ID/cars
+### POST /person/ID/car
   {
   "licencePlate": "ABC123"
   }
