@@ -39,6 +39,6 @@
 ### GET /park
   To retrieve a list of all active parkings.
 
-### PATCH /park/1/add
+### PATCH /park/personID/add
   No JSON.
   Will add 5 minutes to the carID endTime.
