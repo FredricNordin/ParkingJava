@@ -1,5 +1,5 @@
 # Parking Java assignment for school.
-## Java 19, Spring Boot, MySQL,
+## Java 19, Spring Boot 3.0.0, MySQL,
  
 ### GET /person
   For a list of all persons.
