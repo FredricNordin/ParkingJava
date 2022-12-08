@@ -1,44 +1,44 @@
 # Parking Java assignment for school.
 ## Java 19, Spring Boot 3.0.0, MySQL,
  
-### GET /person
+### GET /api/person
   For a list of all persons.
 
-### GET /person/ID
+### GET /api/person/ID
   To retrieve info about person with ID.
 
-### GET /person/ID/car
+### GET /api/person/ID/car
   To retrieve all cars owned by person.
 
-### POST /person
+### POST /api/person
   {
   "name": "PersonName"
   }
   To add a person.
 
-### POST /person/ID/car
+### POST /api/person/ID/car
   {
   "licencePlate": "ABC123"
   }
   To add a car to person with ID.
 
-### GET /parkingspot
+### GET /api/parkingspot
   Retrieve a list of all parkingspots.
 
-### POST /parkingspot
+### POST /api/parkingspot
   {
   "capacity": 20,
   "location": "Shopping mall 1"
   }
   To add a parkingspot at location with capacity.
 
-### POST /park/personID/carId/parkingSpotID
+### POST /api/park/personID/carId/parkingSpotID
   No JSON.
   all params are taken from URI to park a user with car at parkingspot.
 
-### GET /park
+### GET /api/park
   To retrieve a list of all active parkings.
 
-### PATCH /park/carID/add
+### PATCH /api/park/carID/add
   No JSON.
   Will add 5 minutes to the carID endTime.
