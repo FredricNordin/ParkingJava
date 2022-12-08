@@ -37,26 +37,26 @@ public class ApiControllers {
     }
 
     // Get all persons.
-    @GetMapping("/person")
+    @GetMapping("/persons")
     public List<Person> getPerson() {
         return personRepo.findAll();
     }
 
     // Add a person.
-    @PostMapping("/person")
+    @PostMapping("/persons")
     public String addPerson(@RequestBody Person person) {
         personRepo.save(person);
         return "Saved person..!";
     }
 
     // Get a person by id.
-    @GetMapping("/person/{id}")
+    @GetMapping("/persons/{id}")
     public Person getPersonById(@PathVariable Long id) {
         return personRepo.findById(id).get();
     }
 
     // Add a car to person.
-    @PostMapping("/person/{id}/car")
+    @PostMapping("/persons/{id}/car")
     public String addCar(@PathVariable Long id, @RequestBody Car car) {
         Person person = personRepo.findById(id).get();
         car.setPerson(person);
@@ -65,21 +65,21 @@ public class ApiControllers {
     }
 
     // Get cars by person id.
-    @GetMapping("/person/{id}/car")
+    @GetMapping("/persons/{id}/car")
     public List<Car> getCarsByPersonId(@PathVariable Long id) {
         Person person = personRepo.findById(id).get();
         return person.getCars();
     }
 
     // Add a parking spot.
-    @PostMapping("/parkingspot")
+    @PostMapping("/parkingspots")
     public String addParkingSpot(@RequestBody ParkingSpots parkingSpot) {
         parkingSpotsRepo.save(parkingSpot);
         return "Saved parking spot..!";
     }
 
     // Get all parking spots.
-    @GetMapping("/parkingspot")
+    @GetMapping("/parkingspots")
     public List<ParkingSpots> getParkingSpots() {
         return parkingSpotsRepo.findAll();
     }
