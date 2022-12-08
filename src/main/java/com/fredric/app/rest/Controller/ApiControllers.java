@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fredric.app.rest.Entities.Car;
@@ -22,12 +23,12 @@ import com.fredric.app.rest.Repo.ParkingSpotsRepo;
 import com.fredric.app.rest.Repo.PersonRepo;
 
 @RestController
+@RequestMapping("/api")
 public class ApiControllers {
     @Autowired PersonRepo personRepo;
     @Autowired CarRepo carRepo;
     @Autowired ParkingSpotsRepo parkingSpotsRepo;
     @Autowired ParkingEventRepo parkingEventRepo;
-
 
     @GetMapping("/")
     public String getPage() {
